@@ -1,3 +1,5 @@
+[![CI](https://github.com/jbakerdev/web/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jbakerdev/web/actions/workflows/ci.yml)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
