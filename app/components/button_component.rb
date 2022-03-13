@@ -21,14 +21,14 @@ class ButtonComponent < ViewComponent::Base
   }.freeze
   SIZE_OPTIONS = SIZE_MAPPINGS.keys
 
-  BASE_CSS = %w{
+  BASE_CSS = %w[
     inline-flex items-center
     border border-transparent
     rounded-md
     shadow-sm text-white
     hover:outline-none hover:ring-2 hover:ring-offset-2
     focus:outline-none focus:ring-2 focus:ring-offset-2
-  }
+  ]
 
   def initialize(scheme: DEFAULT_SCHEME, size: DEFAULT_SIZE)
     @scheme = scheme

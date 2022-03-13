@@ -38,7 +38,7 @@ class HeadingComponentTest < ViewComponent::TestCase
   test "renders h5 heading" do
     render_inline HeadingComponent.new(tag: :h5)
 
-    assert_selector "h5", class: %w[text-lg  mb-1]
+    assert_selector "h5", class: %w[text-lg mb-1]
   end
 
   test "renders h6 heading" do

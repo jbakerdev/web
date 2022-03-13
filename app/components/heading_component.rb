@@ -11,10 +11,10 @@ class HeadingComponent < ViewComponent::Base
     :h6 => "text-md"
   }.freeze
 
-  BASE_CSS = %w{
+  BASE_CSS = %w[
     font-bold
     text-yellow
-  }
+  ]
 
   def initialize(tag: DEFAULT_TAG)
     @tag = tag
