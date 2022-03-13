@@ -8,7 +8,7 @@ class ButtonComponentPreview < ViewComponent::Preview
   # @label Default
   # @param scheme select [primary, secondary, success, warning, danger]
   # @param size select [sm, md, lg]
-  def default(scheme: :primary, size: :medium)
+  def default(scheme: :primary, size: :md)
     render ButtonComponent.new(scheme: scheme, size: size) do
       "Click Here"
     end
