@@ -76,4 +76,5 @@ end
 
 gem "honeybadger", "~> 4.0"
 gem "lookbook", "~> 0.6.1"
+gem "standard", "~> 1.7", group: [:development, :test]
 gem "view_component", "~> 2.49"
