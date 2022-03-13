@@ -74,4 +74,5 @@ group :test do
   gem "webdrivers"
 end
 
+gem "lookbook"
 gem "view_component", "~> 2.49"
