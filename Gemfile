@@ -74,5 +74,6 @@ group :test do
   gem "webdrivers"
 end
 
+gem "honeybadger", "~> 4.0"
 gem "lookbook"
 gem "view_component", "~> 2.49"
