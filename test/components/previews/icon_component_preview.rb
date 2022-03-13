@@ -48,5 +48,4 @@ class IconComponentPreview < ViewComponent::Preview
   end
 
   # @!endgroup
-
 end

@@ -11,13 +11,13 @@ class IconComponent < ViewComponent::Base
   }.freeze
 
   SIZE_MAPPINGS = {
-    :sm => "text-xl",
-    :md => "text-2xl",
-    :lg => "text-3xl"
+    sm: "text-xl",
+    md: "text-2xl",
+    lg: "text-3xl"
   }.freeze
   SIZE_OPTIONS = SIZE_MAPPINGS.keys
 
-  def initialize(scheme: DEFAULT_SCHEME, size: nil, name:)
+  def initialize(name:, scheme: DEFAULT_SCHEME, size: nil)
     @scheme = scheme
     @size = size
     @name = name

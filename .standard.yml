@@ -1,0 +1,12 @@
+ignore:
+  - 'app/components/*':
+      - Layout/HashAlignment
+  - 'config/puma.rb':
+      - Style/RedundantFetchBlock
+  - 'config/environments/*':
+      - Layout/ExtraSpacing
+      - Layout/SpaceInsideArrayLiteralBrackets
+      - Layout/SpaceInsidePercentLiteralDelimiters
+      - Style/GlobalStdStream
+  - 'Gemfile':
+      - Layout/SpaceInsidePercentLiteralDelimiters

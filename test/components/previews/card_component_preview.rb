@@ -10,7 +10,6 @@ class CardComponentPreview < ViewComponent::Preview
     render CardComponent.new do
       "This is a card"
     end
-
   end
 
   def header
@@ -46,5 +45,4 @@ class CardComponentPreview < ViewComponent::Preview
       "This is a card"
     end
   end
-
 end

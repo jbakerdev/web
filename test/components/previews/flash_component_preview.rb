@@ -28,5 +28,4 @@ class FlashComponentPreview < ViewComponent::Preview
   end
 
   # @!endgroup
-
 end

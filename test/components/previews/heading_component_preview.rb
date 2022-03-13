@@ -52,5 +52,4 @@ class HeadingComponentPreview < ViewComponent::Preview
   end
 
   # @!endgroup
-
 end
