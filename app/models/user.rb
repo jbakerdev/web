@@ -6,8 +6,11 @@ class User < ApplicationRecord
   # relationships .............................................................
 
   # validations ...............................................................
+  validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}
+  has_secure_password
 
   # callbacks .................................................................
+  before_save :format_email
 
   # scopes ....................................................................
 
@@ -20,4 +23,10 @@ class User < ApplicationRecord
   # protected instance methods ................................................
 
   # private instance methods ..................................................
+
+  private
+
+  def format_email
+    self.email = email.downcase
+  end
 end
