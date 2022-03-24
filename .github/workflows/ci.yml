@@ -39,6 +39,8 @@ jobs:
         run: bin/rails db:setup
 
       - name: Test
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
         run: bin/rails test
 
       - name: Lint
