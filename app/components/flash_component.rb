@@ -25,4 +25,8 @@ class FlashComponent < ViewComponent::Base
   def before_render
     icon(scheme: "", name: "") unless icon
   end
+
+  def render?
+    content.present?
+  end
 end

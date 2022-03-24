@@ -13,6 +13,14 @@
   </head>
 
   <body class="bg-base03 text-base0">
+    <%= render FlashComponent.new(scheme: :notice) do %>
+      <%= notice %>
+    <% end %>
+
+    <%= render FlashComponent.new(scheme: :alert) do %>
+      <%= alert %>
+    <% end %>
+
     <%= render NavbarComponent.new do |c| %>
       <% c.link(name: "Lookbook", url: lookbook_path, target: :_blank) %>
     <% end %>
