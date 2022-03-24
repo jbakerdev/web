@@ -13,7 +13,10 @@
   </head>
 
   <body class="bg-base03 text-base0">
-    <%= render NavbarComponent.new %>
+    <%= render NavbarComponent.new do |c| %>
+      <% c.link(name: "Lookbook", url: lookbook_path, target: :_blank) %>
+    <% end %>
+
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <% if content_for?(:title) %>
         <%= render PageHeadingComponent.new(title: content_for(:title)) %>
