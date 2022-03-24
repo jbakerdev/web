@@ -6,7 +6,23 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
-  CI:
+  Lint:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Lint
+        run: bin/rails standard
+
+  Test:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
@@ -32,14 +48,15 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Test
+      - name: Setup database
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-        run: |
-          bin/rails db:setup
-          bin/rails test:controllers
-          bin/rails test:components
+        run: bin/rails db:setup
 
-      - name: Lint
-        run: bin/rails standard
+      - name: Test
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
+        run: |
+          bin/rails test:prepare
+          bin/rails test
