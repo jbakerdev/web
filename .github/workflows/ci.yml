@@ -6,7 +6,23 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
-  CI:
+  Lint:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby and install gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Lint
+        run: bin/rails standard
+
+  Test:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
@@ -42,6 +58,3 @@ jobs:
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
         run: bin/rails test
-
-      - name: Lint
-        run: bin/rails standard
