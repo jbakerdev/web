@@ -32,14 +32,14 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Test
+      - name: Setup database
         env:
           DATABASE_URL: postgres://postgres:postgres@localhost:5432/test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
-        run: |
-          bin/rails db:setup
-          bin/rails test:controllers
-          bin/rails test:components
+        run: bin/rails db:setup
+
+      - name: Test
+        run: bin/rails test
 
       - name: Lint
         run: bin/rails standard
