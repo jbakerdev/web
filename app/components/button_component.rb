@@ -26,7 +26,7 @@ class ButtonComponent < ViewComponent::Base
     border border-transparent
     rounded-md
     shadow-sm text-white
-    hover:outline-none hover:ring-2 hover:ring-offset-2
+    hover:ring-2 hover:ring-white
     focus:outline-none focus:ring-2 focus:ring-offset-2
   ]
 
