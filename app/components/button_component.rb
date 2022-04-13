@@ -5,7 +5,7 @@ class ButtonComponent < ViewComponent::Base
   LINK_SCHEME = :link
   SCHEME_MAPPINGS = {
     DEFAULT_SCHEME => "bg-magenta hover:bg-magenta hover:ring-magenta",
-    :secondary     => "bg-base01  hover:bg-base01 focus:ring-base01",
+    :secondary     => "bg-solar3  hover:bg-solar3 focus:ring-solar3",
     :success       => "bg-cyan    hover:bg-cyan focus:ring-cyan",
     :warning       => "bg-yellow  hover:bg-yellow focus:ring-yellow",
     :danger        => "bg-red     hover:bg-red focus:ring-red",

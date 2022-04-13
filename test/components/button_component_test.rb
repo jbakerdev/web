@@ -20,7 +20,7 @@ class ButtonComponentTest < ViewComponent::TestCase
   test "renders secondary button" do
     render_inline ButtonComponent.new(scheme: :secondary)
 
-    assert_selector "button", class: %w[bg-base01]
+    assert_selector "button", class: %w[bg-solar3]
   end
 
   test "renders success button" do

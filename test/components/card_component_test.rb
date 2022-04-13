@@ -6,7 +6,7 @@ class CardComponentTest < ViewComponent::TestCase
   test "renders default card" do
     render_inline CardComponent.new
 
-    assert_selector "div", class: %w[bg-base02 overflow-hidden shadow rounded-lg divide-y divide-base00]
+    assert_selector "div", class: %w[bg-solar4 overflow-hidden shadow rounded-lg divide-y divide-solar2]
   end
 
   # Scheme

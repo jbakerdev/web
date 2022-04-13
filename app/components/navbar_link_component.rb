@@ -6,8 +6,8 @@ class NavbarLinkComponent < ViewComponent::Base
     @options = {
       href: url,
       class: %w[
-        text-base0
-        hover:text-white
+        text-solar1
+        hover:text-solar3
         px-3
         py-2
         text-sm

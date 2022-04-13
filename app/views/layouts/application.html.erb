@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-dark">
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "jbakerdev" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/16cd28e879.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-base03 text-base0">
+  <body class="bg-solar5 text-solar2">
     <%= render FlashComponent.new(scheme: :notice) do %>
       <%= notice %>
     <% end %>
