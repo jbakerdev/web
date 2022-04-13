@@ -27,6 +27,11 @@
       <%# Right %>
       <div class="sm:ml-6 sm:block">
         <div class="flex items-center">
+          <div data-controller="theme">
+            <button class="hover:text-solar3" data-action="click->theme#toggle">
+              <%= render IconComponent.new(name: "circle-half-stroke") %>
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -16,5 +16,11 @@
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <%= yield %>
     </main>
+
+    <div data-controller="theme">
+      <button class="absolute bottom-0 right-0 h-16 w-16 mx-4 my-4 text-solar1 hover:text-solar3" data-action="click->theme#toggle">
+        <%= render IconComponent.new(name: "circle-half-stroke", size: :lg) %>
+      </button>
+    </div>
   </body>
 </html>
