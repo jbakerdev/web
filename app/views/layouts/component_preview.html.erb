@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="theme-dark">
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "jbakerdev" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,9 +12,15 @@
     <script src="https://kit.fontawesome.com/16cd28e879.js" crossorigin="anonymous"></script>
   </head>
 
-  <body class="bg-base03 text-base0">
+  <body class="bg-solar5 text-solar2">
     <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <%= yield %>
     </main>
+
+    <div data-controller="theme">
+      <button class="absolute bottom-0 right-0 h-16 w-16 mx-4 my-4 text-solar1 hover:text-solar3" data-action="click->theme#toggle">
+        <%= render IconComponent.new(name: "circle-half-stroke", size: :lg) %>
+      </button>
+    </div>
   </body>
 </html>

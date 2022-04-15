@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-black:     0   0   0;
+  --color-base03:    0  43  54;
+  --color-base02:    7  54  66;
+  --color-base01:   88 110 117;
+  --color-base00:  101 123 131;
+  --color-base0:   131 148 150;
+  --color-base1:   147 161 161;
+  --color-base2:   238 232 213;
+  --color-base3:   253 246 227;
+  --color-white:   255 255 255;
+  --color-yellow:  181 137   0;
+  --color-orange:  203  75  22;
+  --color-red:     220  50  47;
+  --color-magenta: 211  54 130;
+  --color-violet:  108 113 196;
+  --color-blue:     38 139 210;
+  --color-cyan:     42 161 152;
+  --color-green:   133 153   0;
+}
+
+.theme-dark {
+  --color-solar1: var(--color-base1);
+  --color-solar2: var(--color-base0);
+  --color-solar3: var(--color-base01);
+  --color-solar4: var(--color-base02);
+  --color-solar5: var(--color-base03);
+}
+
+.theme-light {
+  --color-solar1: var(--color-base01);
+  --color-solar2: var(--color-base00);
+  --color-solar3: var(--color-base1);
+  --color-solar4: var(--color-base2);
+  --color-solar5: var(--color-base3);
+}
+
 @layer base {
   h1 {
     @apply text-5xl font-bold;

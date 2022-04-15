@@ -1,4 +1,4 @@
-<nav class="bg-base02">
+<nav class="bg-solar4">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <%# Left %>
@@ -27,6 +27,11 @@
       <%# Right %>
       <div class="sm:ml-6 sm:block">
         <div class="flex items-center">
+          <div data-controller="theme">
+            <button class="hover:text-solar3" data-action="click->theme#toggle">
+              <%= render IconComponent.new(name: "circle-half-stroke") %>
+            </button>
+          </div>
         </div>
       </div>
     </div>
