@@ -20,6 +20,6 @@ export default class extends Controller {
   }
 
   set_cookie(theme) {
-    document.cookie = "user_theme=" + theme;
+    document.cookie = "user_theme=" + theme + "; path=/"
   }
 }
