@@ -62,7 +62,8 @@ jobs:
           bin/rails test
 
   Deploy:
+    if: ${{ github.ref == 'ref/heads/main' }}
     needs: Test
-    uses: jbakerdev/web/.github/workflows/deploy.yml@main
+    uses: jbakerdev/web/.github/workflows/deploy.yml@feature/fly.io
     secrets:
       FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
