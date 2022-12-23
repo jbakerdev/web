@@ -62,7 +62,6 @@ jobs:
           bin/rails test
 
   Deploy:
-    if: ${{ github.ref == 'ref/heads/main' }}
     needs: Test
     uses: jbakerdev/web/.github/workflows/deploy.yml@main
     secrets:
