@@ -76,5 +76,5 @@ end
 
 gem "honeybadger"
 gem "lookbook", "~> 1.5.5"
-gem "standard", "~> 1.14", group: [:development, :test]
+gem "standard", group: [:development, :test]
 gem "view_component", "~> 2.63"
