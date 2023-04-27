@@ -75,6 +75,6 @@ group :test do
 end
 
 gem "honeybadger", "~> 4.12.1"
-gem "lookbook", "~> 0.9.3"
+gem "lookbook", "~> 1.5.5"
 gem "standard", "~> 1.14", group: [:development, :test]
 gem "view_component", "~> 2.63"
