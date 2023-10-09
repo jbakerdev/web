@@ -3,8 +3,4 @@
 
 require_relative "config/application"
 
-unless Rails.env.production?
-  require "standard/rake"
-end
-
 Rails.application.load_tasks
