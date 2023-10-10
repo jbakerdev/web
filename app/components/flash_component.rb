@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class FlashComponent < ViewComponent::Base
-  renders_one :icon, ->(scheme:, name:) do
-    IconComponent.new(scheme: :solid, name: @icon_name)
-  end
+  renders_one :icon, IconComponent
 
   DEFAULT_SCHEME = :notice
   SCHEME_MAPPINGS = {
@@ -20,10 +18,6 @@ class FlashComponent < ViewComponent::Base
     @scheme = scheme
     @color = SCHEME_MAPPINGS[scheme]
     @icon_name = ICON_MAPPINGS[scheme]
-  end
-
-  def before_render
-    icon(scheme: "", name: "") unless icon
   end
 
   def render?
