@@ -6,8 +6,8 @@ class NavbarComponentPreview < ViewComponent::Preview
   # @label Default
   def default
     render NavbarComponent.new do |c|
-      c.link(name: "Link", url: "")
-      c.link(name: "Link (new window)", url: "", target: :_blank)
+      c.with_link(name: "Link", url: "")
+      c.with_link(name: "Link (new window)", url: "", target: :_blank)
     end
   end
 end
