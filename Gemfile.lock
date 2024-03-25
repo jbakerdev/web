@@ -171,7 +171,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     public_suffix (5.0.3)
     puma (6.4.0)
@@ -216,7 +216,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.0.6)
-    rdoc (6.5.0)
+    rdoc (6.6.3.1)
       psych (>= 4.0.0)
     redcarpet (3.6.0)
     redis (5.0.7)
@@ -273,7 +273,7 @@ GEM
       rubocop-performance (~> 1.19.1)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
-    stringio (3.0.8)
+    stringio (3.1.0)
     tailwindcss-rails (2.0.31-arm64-darwin)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.31-x86_64-linux)
