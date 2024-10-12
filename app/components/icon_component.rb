@@ -24,7 +24,7 @@ class IconComponent < ViewComponent::Base
   end
 
   def css_classes
-    [SCHEME_MAPPINGS[@scheme], SIZE_MAPPINGS[@size], ["fa", @name.to_s].join("-")].join(" ")
+    [ SCHEME_MAPPINGS[@scheme], SIZE_MAPPINGS[@size], [ "fa", @name.to_s ].join("-") ].join(" ")
   end
 
   def call

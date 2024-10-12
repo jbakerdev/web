@@ -21,7 +21,7 @@ class HeadingComponent < ViewComponent::Base
   end
 
   def css_classes
-    [TAG_MAPPINGS[@tag], BASE_CSS].join(" ")
+    [ TAG_MAPPINGS[@tag], BASE_CSS ].join(" ")
   end
 
   def call
