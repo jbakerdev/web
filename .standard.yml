@@ -3,10 +3,15 @@ ignore:
       - Layout/HashAlignment
   - 'config/puma.rb':
       - Style/RedundantFetchBlock
+  - 'config/routes.rb':
+      - Style/HashSyntax
   - 'config/environments/*':
       - Layout/ExtraSpacing
       - Layout/SpaceInsideArrayLiteralBrackets
+      - Layout/SpaceInsideHashLiteralBraces
       - Layout/SpaceInsidePercentLiteralDelimiters
       - Style/GlobalStdStream
   - 'Gemfile':
       - Layout/SpaceInsidePercentLiteralDelimiters
+  - 'test/*':
+      - Layout/SpaceInsideArrayLiteralBrackets
