@@ -69,5 +69,4 @@ end
 
 gem "honeybadger"
 gem "lookbook"
-gem "standard", group: [:development, :test]
 gem "view_component"

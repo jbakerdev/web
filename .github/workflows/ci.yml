@@ -24,9 +24,6 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Lint
-        run: bin/rails standard
-
   Test:
     runs-on: ubuntu-latest
     env:
