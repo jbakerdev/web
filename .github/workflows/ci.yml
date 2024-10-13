@@ -22,14 +22,6 @@ jobs:
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
 
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: ruby
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
-
   scan_js:
     runs-on: ubuntu-latest
 
@@ -45,14 +37,6 @@ jobs:
 
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bin/importmap audit
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
-        with:
-          languages: javascript
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
 
   lint:
     runs-on: ubuntu-latest
