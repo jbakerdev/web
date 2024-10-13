@@ -23,12 +23,12 @@ jobs:
         run: bin/brakeman --no-pager
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: ruby
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
 
   scan_js:
     runs-on: ubuntu-latest
@@ -47,12 +47,12 @@ jobs:
         run: bin/importmap audit
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: javascript
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
 
   lint:
     runs-on: ubuntu-latest
