@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :sessions, dependent: :destroy
 
   # validations ...............................................................
+  validates :email_address, presence: true, uniqueness: true
 
   # callbacks .................................................................
   normalizes :email_address, with: ->(e) { e.strip.downcase }
