@@ -14,7 +14,7 @@ class CardComponentPreview < ViewComponent::Preview
 
   def header
     render CardComponent.new do |c|
-      c.header do
+      c.with_header do
         "This card has a header"
       end
 
@@ -24,11 +24,11 @@ class CardComponentPreview < ViewComponent::Preview
 
   def header_and_footer
     render CardComponent.new do |c|
-      c.header do
+      c.with_header do
         "This card has a header"
       end
 
-      c.footer do
+      c.with_footer do
         "This card has a footer"
       end
 
@@ -38,7 +38,7 @@ class CardComponentPreview < ViewComponent::Preview
 
   def footer
     render CardComponent.new do |c|
-      c.footer do
+      c.with_footer do
         "This card has a footer"
       end
 
