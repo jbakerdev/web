@@ -12,5 +12,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: "home#index"
 
+  # Authentication resources
+  resource :session
+  resources :passwords, param: :token
+
   mount Lookbook::Engine, at: "/lookbook"
 end

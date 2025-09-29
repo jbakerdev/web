@@ -4,17 +4,18 @@ class User < ApplicationRecord
   # includes ..................................................................
 
   # relationships .............................................................
+  has_many :sessions, dependent: :destroy
 
   # validations ...............................................................
-  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
-  has_secure_password
+  validates :email_address, presence: true, uniqueness: true
 
   # callbacks .................................................................
-  before_save :format_email
+  normalizes :email_address, with: ->(e) { e.strip.downcase }
 
   # scopes ....................................................................
 
   # additional config (i.e. accepts_nested_attribute_for etc...) ..............
+  has_secure_password
 
   # class methods .............................................................
 
@@ -23,10 +24,4 @@ class User < ApplicationRecord
   # protected instance methods ................................................
 
   # private instance methods ..................................................
-
-  private
-
-  def format_email
-    self.email = email.downcase
-  end
 end

@@ -26,7 +26,12 @@
 
       <%# Right %>
       <div class="sm:ml-6 sm:block">
-        <div class="flex items-center">
+        <div class="flex items-center space-x-4">
+          <%# Admin link %>
+          <% if helpers.authenticated? %>
+            <%= button_to("Sign out", session_path, method: :delete, class: "text-solar1 hover:text-solar3 px-3 py-2 text-sm font-medium") %>
+          <% end %>
+
           <div data-controller="theme">
             <button class="hover:text-solar3" data-action="click->theme#toggle">
               <%= render IconComponent.new(name: "circle-half-stroke") %>
