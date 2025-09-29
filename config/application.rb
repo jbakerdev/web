@@ -25,7 +25,7 @@ module Jbakerdev
     # config.eager_load_paths << Rails.root.join("extras")
 
     # ViewComponent
-    config.view_component.default_preview_layout = "component_preview"
+    config.view_component.previews.default_layout = "component_preview"
     config.view_component.show_previews = true
   end
 end
