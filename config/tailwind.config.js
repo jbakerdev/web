@@ -11,13 +11,12 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  darkMode: 'media',
   content: [
     './app/components/**/*',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
     './app/views/**/*'
-  ],  
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -58,7 +57,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
   ]
 }
