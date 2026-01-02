@@ -9,6 +9,24 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+@font-face {
+    font-family: 'Inter var';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("InterVariable.woff2") format("woff2");
+    font-named-instance: 'Regular';
+}
+
+@font-face {
+    font-family: 'Inter var';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("InterVariable-Italic.woff2") format("woff2");
+    font-named-instance: 'Italic';
+}
+
 *, :after, :before {
     --tw-border-spacing-x: 0;
     --tw-border-spacing-y: 0;
@@ -132,6 +150,7 @@
     -webkit-text-size-adjust: 100%;
     font-family: Inter var, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-feature-settings: normal;
+    font-optical-sizing: none;
     font-variation-settings: normal;
     -moz-tab-size: 4;
     -o-tab-size: 4;
