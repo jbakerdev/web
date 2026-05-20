@@ -5,6 +5,27 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  groups:
+    rails:
+      patterns:
+        - "rails"
+        - "actioncable"
+        - "actionmailbox"
+        - "actionmailer"
+        - "actionpack"
+        - "actiontext"
+        - "actionview"
+        - "activejob"
+        - "activemodel"
+        - "activerecord"
+        - "activestorage"
+        - "activesupport"
+        - "railties"
+    dev-test:
+      dependency-type: "development"
+      exclude-patterns:
+        - "brakeman"
+
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
