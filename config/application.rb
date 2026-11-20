@@ -26,6 +26,6 @@ module Jbakerdev
 
     # ViewComponent
     config.view_component.previews.default_layout = "component_preview"
-    config.view_component.show_previews = true
+    config.view_component.previews.enabled = true
   end
 end
