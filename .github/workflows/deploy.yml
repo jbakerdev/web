@@ -29,6 +29,6 @@ jobs:
     needs: deploy
     if: success()
     steps:
-      - uses: honeybadger-io/github-notify-deploy-action@v1
+      - uses: honeybadger-io/github-notify-deploy-action@v2
         with:
           api_key: ${{ secrets.HONEYBADGER_API_KEY }}
