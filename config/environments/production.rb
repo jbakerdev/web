@@ -88,5 +88,5 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   # ViewComponent
-  config.view_component.show_previews = true
+  config.view_component.previews.enabled = true
 end
